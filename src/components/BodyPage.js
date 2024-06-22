@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../image/vanda_profile.jpeg";
+import myImage from "../image/seanghak_profile.jpg";
 import DownloadButton from "./DownloadButton";
 
 const Body = () => {
