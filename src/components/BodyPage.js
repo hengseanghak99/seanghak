@@ -20,7 +20,7 @@ const Body = () => {
                 QA Tester
               </h6>
               <h1 className="font-normal text-4xl md:text-7xl leading-none mb-8">
-                MARN VANDA
+               HENG SEANGHAK
               </h1>
               <p className="font-normal text-md md:text-xl mb-16">
                 Insanity is doing the same things repeatedly and expected
