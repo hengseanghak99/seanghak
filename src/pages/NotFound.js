@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const HomePage = () => {
   return (
     <div>
-            <SpeedInsights></SpeedInsights>
+      <SpeedInsights></SpeedInsights>
       <Headers></Headers>
       <Particles id="tsparticles"></Particles>
       <Error404></Error404>
