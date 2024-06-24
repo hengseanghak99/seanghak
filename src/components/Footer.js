@@ -1,6 +1,7 @@
 // src/Footer.js
 
 import React from "react";
+import { Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,10 +25,10 @@ const Footer = () => {
               <li>email@example.com</li>
             </ul>
           </div>
-          <div className="text-white">
-            <h3 className="text-lg font-bold mb-4">Social Media</h3>
+          <div className="text-gray-400 py-3">
+            <h3 className="text-lg font-bold mb-4 text-white">Social Media</h3>
             <ul className="flex space-x-4">
-              <li>
+              <li className="text-white">
                 <a href="https://github.com/hengseanghak99" className="hover:text-gray-400">
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
@@ -40,7 +41,7 @@ const Footer = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="text-blue-600">
                 <a href="https://www.facebook.com/profile.php?id=100022748828006" className="hover:text-gray-400">
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
@@ -53,7 +54,7 @@ const Footer = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="text-sky-600">
                 <a href="hengseanghak10499@gmail.com" className="hover:text-gray-400">
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
@@ -66,7 +67,7 @@ const Footer = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="text-blue-500">
                 <a href="https://www.linkedin.com/in/seanghak-heng-34a522204/" className="hover:text-gray-400">
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
@@ -82,11 +83,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div
-    className=" p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+        <div className=" p-4 text-center text-yellow-300 bg-tranparent border border-white ">
     © 2023 Copyright:
     <a
-      className="text-neutral-800 dark:text-neutral-400"
+      className="text-yellow-300"
       href="https://tw-elements.com/"
       >HENG SEANGHAK</a
     >

@@ -3,30 +3,29 @@ import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
 const Body = () => {
   return (
-    <div className="relative">
-      <main className="flex-col justify-around py-16 font-mono">
-        <section className="py-10 md:py-16">
+    <div className="relative min-h-screen">
+      <main className="flex-col justify-around py-8 md:py-16 font-mono">
+        <section className="py-8 md:py-16">
           <div className="container max-w-screen-xl mx-auto px-4">
-            <h1 className="font-normal text-4xl md:text-7xl leading-none mb-8 text-white">
+            <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl leading-none mb-8 text-white text-center">
               Experience
             </h1>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
-              <li className="mb-10 ms-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900">
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              <li className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900">
                   <BriefcaseBusiness className="text-white" />
                 </span>
-
-                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                  Junior QA Tester{" "}
-                  <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
-                    Current
-                  </span>
-                </h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-100">
-                  Tech Solutions Inc. - Jan 2020 to Present
-                </time>
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                  <ul className="list-disc list-inside ml-4">
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                  <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                    Junior QA Tester
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium ml-3 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                      Current
+                    </span>
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">
+                    Tech Solutions Inc. - Jan 2020 to Present
+                  </time>
+                  <ul className="list-disc list-inside ml-4 text-base font-normal text-gray-500 dark:text-gray-400">
                     <li>
                       Led the QA team in developing and executing comprehensive
                       test plans and test cases for web and mobile applications.
@@ -44,20 +43,20 @@ const Body = () => {
                       applications met performance benchmarks.
                     </li>
                   </ul>
-                </p>
+                </div>
               </li>
-              <li className="mb-10 ms-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900">
+              <li className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900">
                   <BriefcaseBusiness className="text-white" />
                 </span>
-                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                  QA Tester
-                </h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-100 dark:text-gray-100">
-                  Creative Agency - Jun 2017 to Dec 2019
-                </time>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  <ul className="list-disc list-inside ml-4">
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-100">
+                    QA Tester
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">
+                    Creative Agency - Jun 2017 to Dec 2019
+                  </time>
+                  <ul className="list-disc list-inside ml-4 text-base font-normal text-gray-500 dark:text-gray-400">
                     <li>
                       Performed functional, regression, and user acceptance
                       testing (UAT) on various web applications.
@@ -75,20 +74,20 @@ const Body = () => {
                       reports to stakeholders.
                     </li>
                   </ul>
-                </p>
+                </div>
               </li>
-              <li className="mb-10 ms-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900">
+              <li className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900">
                   <BriefcaseBusiness className="text-white" />
                 </span>
-                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                  QA Intern
-                </h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-100">
-                  Startup Hub - Jan 2016 to May 2017
-                </time>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  <ul className="list-disc list-inside ml-4">
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-100">
+                    QA Intern
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">
+                    Startup Hub - Jan 2016 to May 2017
+                  </time>
+                  <ul className="list-disc list-inside ml-4 text-base font-normal text-gray-500 dark:text-gray-400">
                     <li>
                       Assisted in the creation and execution of test plans and
                       test cases for mobile and web applications.
@@ -106,33 +105,32 @@ const Body = () => {
                       agile development methodologies.
                     </li>
                   </ul>
-                </p>
+                </div>
               </li>
             </ol>
           </div>
         </section>
-
-        <section className="py-10 md:py-16">
+        <section className="py-8 md:py-16">
           <div className="container max-w-screen-xl mx-auto px-4">
-            <h1 className="font-normal text-4xl md:text-7xl leading-none mb-8 text-white">
+            <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl leading-none mb-8 text-white text-center">
               Education
             </h1>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
-              <li className="mb-10 ms-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -start-3 ring-8 ring-green-400 ">
-                  <GraduationCap />
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              <li className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900">
+                  <GraduationCap className="text-white" />
                 </span>
-                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                  Bachelor of Science in Computer Science{" "}
-                  <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 ms-3">
-                    Graduated
-                  </span>
-                </h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  University of Technology - Sept 2015 to Jun 2019
-                </time>
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                  <ul className="list-disc list-inside ml-4">
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                  <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                    Bachelor of Science in Computer Science
+                    <span className="bg-green-100 text-green-800 text-sm font-medium ml-3 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                      Graduated
+                    </span>
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    University of Technology - Sept 2015 to Jun 2019
+                  </time>
+                  <ul className="list-disc list-inside ml-4 text-base font-normal text-gray-500 dark:text-gray-400">
                     <li>Graduated with Honors, GPA: 3.8/4.0</li>
                     <li>
                       Relevant Coursework: Software Testing and Quality
@@ -149,37 +147,37 @@ const Body = () => {
                       Assistant for Introduction to Programming course
                     </li>
                   </ul>
-                </p>
+                </div>
               </li>
-              <li className="mb-10 ms-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -start-3 ring-8 ring-green-400 ">
-                  <GraduationCap />
+              <li className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900">
+                  <GraduationCap className="text-white" />
                 </span>
-                <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                Certification in QA Testing
-                <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 ms-3">
-                    Graduated
-                  </span>
-                </h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                QA Testing Institute - Mar 2020 to Aug 2020
-                </time>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                <ul className="list-disc list-inside ml-4">
-              <li>
-                Completed intensive program focusing on manual and automated
-                testing methodologies
-              </li>
-              <li>
-                Gained proficiency in tools such as Selenium, JMeter, and
-                TestRail
-              </li>
-              <li>
-                Final Project: Led a team in the creation of an automated
-                testing framework for a simulated e-commerce application
-              </li>
-            </ul>
-                </p>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                  <h3 className="mb-1 text-xl font-semibold text-gray-100">
+                    Certification in QA Testing
+                    <span className="bg-green-100 text-green-800 text-sm font-medium ml-3 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                      Graduated
+                    </span>
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    QA Testing Institute - Mar 2020 to Aug 2020
+                  </time>
+                  <ul className="list-disc list-inside ml-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                    <li>
+                      Completed intensive program focusing on manual and
+                      automated testing methodologies
+                    </li>
+                    <li>
+                      Gained proficiency in tools such as Selenium, JMeter, and
+                      TestRail
+                    </li>
+                    <li>
+                      Final Project: Led a team in the creation of an automated
+                      testing framework for a simulated e-commerce application
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ol>
           </div>
