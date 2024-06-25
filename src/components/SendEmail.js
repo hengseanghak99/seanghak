@@ -52,59 +52,61 @@ const ContactForm = () => {
             Contact Me
           </h2>
 
-          <form className="mt-10" onSubmit={handleSubmit}>
-            {/* Name Input */}
-            <label htmlFor="name" className="block text-xs font-mono text-white uppercase">
-              Name
-            </label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              autoComplete="name"
-              className="block w-full py-3 px-1 mt-2 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
-              required
-              value={formData.name}
-              onChange={handleChange}
-            />
+          <form className="mt-10" autoComplete="off" onSubmit={handleSubmit}>
+  {/* Name Input */}
+  <label htmlFor="name" className="block text-xs font-mono text-white uppercase">
+    Name
+  </label>
+  <input
+    id="name"
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    className="block w-full py-3 px-1 mt-2 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
+    required
+    value={formData.name}
+    onChange={handleChange}
+    autoComplete="new-password"
+  />
 
-            {/* Email Input */}
-            <label htmlFor="email" className="block mt-2 text-xs font-mono text-white uppercase">
-              E-mail
-            </label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              autoComplete="email"
-              className="block w-full py-3 px-1 mt-2 mb-4 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
-              required
-              value={formData.email}
-              onChange={handleChange}
-            />
+  {/* Email Input */}
+  <label htmlFor="email" className="block mt-2 text-xs font-mono text-white uppercase">
+    E-mail
+  </label>
+  <input
+    id="email"
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    className="block w-full py-3 px-1 mt-2 mb-4 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
+    required
+    value={formData.email}
+    onChange={handleChange}
+    autoComplete="off"
+  />
 
-            {/* Message Input */}
-            <label htmlFor="message" className="block mt-2 text-xs font-mono text-white uppercase">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here"
-              className="block w-full h-32 py-3 px-1 mt-2 mb-4 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
-              required
-              value={formData.message}
-              onChange={handleChange}
-            />
-            <button
-              type="submit"
-              className="w-full py-3 mt-10 bg-gray-800 font-mono rounded-sm font-medium text-white uppercase focus:outline-none hover:bg-gray-700 hover:shadow-none"
-            >
-              Send Message
-            </button>
-          </form>
+  {/* Message Input */}
+  <label htmlFor="message" className="block mt-2 text-xs font-mono text-white uppercase">
+    Message
+  </label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Write your message here"
+    className="block w-full h-32 py-3 px-1 mt-2 mb-4 font-mono bg-transparent appearance-none border-b-2 border-gray-100 text-white focus:text-white focus:outline-none focus:border-gray-200"
+    required
+    value={formData.message}
+    onChange={handleChange}
+    autoComplete="off"
+  />
+  <button
+    type="submit"
+    className="w-full py-3 mt-10 bg-gray-800 font-mono rounded-sm font-medium text-white uppercase focus:outline-none hover:bg-gray-700 hover:shadow-none"
+  >
+    Send Message
+  </button>
+</form>
+
         </div>
       </div>
     </div>

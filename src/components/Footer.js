@@ -1,35 +1,41 @@
 // src/Footer.js
 
 import React from "react";
-import { Github } from 'lucide-react';
+import { Github } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-opacity-10 py-8 font-mono ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8">
           <div className="text-white">
             <h3 className="text-lg font-bold mb-4">About Me</h3>
             <p className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              tincidunt quam vitae ante elementum, nec finibus ex tincidunt.
-              Proin dictum lacus sed ullamcorper fermentum.
+              I am a QA tester with over 3 years of experience in software
+              testing. During this time, I have tested software for the
+              government(EDC, SWMA, Siem Reap government) and overseas projects
+              I am also skilled at using automated testing tools such as Ranorex
+              and Playwright and have some experience with web development and
+              mobile development.
             </p>
           </div>
           <div className="text-white">
             <h3 className="text-lg font-bold mb-4">Contact Me</h3>
             <ul className="text-gray-400">
-              <li>123 Main St</li>
-              <li>My City, ST 12345</li>
-              <li>(123) 456-7890</li>
-              <li>email@example.com</li>
+              <li>Svay Jrum,</li>
+              <li>Khsach Kandal,</li>
+              <li>Kandal</li>
+              <li>hengseanghak10499@gmail.com</li>
             </ul>
           </div>
-          <div className="text-gray-400 py-3">
+          <div className="text-gray-400">
             <h3 className="text-lg font-bold mb-4 text-white">Social Media</h3>
             <ul className="flex space-x-4">
               <li className="text-white">
-                <a href="https://github.com/hengseanghak99" className="hover:text-gray-400">
+                <a
+                  href="https://github.com/hengseanghak99"
+                  className="hover:text-gray-400"
+                >
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +48,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-blue-600">
-                <a href="https://www.facebook.com/profile.php?id=100022748828006" className="hover:text-gray-400">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100022748828006"
+                  className="hover:text-gray-400"
+                >
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +64,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-sky-600">
-                <a href="hengseanghak10499@gmail.com" className="hover:text-gray-400">
+                <a
+                  href="hengseanghak10499@gmail.com"
+                  className="hover:text-gray-400"
+                >
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +80,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-blue-500">
-                <a href="https://www.linkedin.com/in/seanghak-heng-34a522204/" className="hover:text-gray-400">
+                <a
+                  href="https://www.linkedin.com/in/seanghak-heng-34a522204/"
+                  className="hover:text-gray-400"
+                >
                   <span className="[&>svg]:h-5 [&>svg]:w-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -84,13 +99,11 @@ const Footer = () => {
           </div>
         </div>
         <div className=" p-4 text-center text-yellow-300 bg-tranparent border border-white ">
-    © 2023 Copyright:
-    <a
-      className="text-yellow-300"
-      href="https://tw-elements.com/"
-      >HENG SEANGHAK</a
-    >
-  </div>
+          © 2023 Copyright:
+          <a className="text-yellow-300" href="https://tw-elements.com/">
+            HENG SEANGHAK
+          </a>
+        </div>
       </div>
     </footer>
   );

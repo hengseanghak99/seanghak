@@ -32,7 +32,7 @@ const Body = () => {
         </section>
         <section
           id="projects"
-          className="p-10 border-b-2 border-white-500 text-gray-300 bg-white bg-opacity-10"
+          className="p-10 text-gray-300"
         >
           <h2 className="text-2xl font-bold mb-4">Projects</h2>
 
