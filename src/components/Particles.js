@@ -31,7 +31,7 @@ const ParticlesComponent = (props) => {
         },
         modes: {
           push: {
-            quantity: 10, // number of particles to add on click
+            quantity: 2, // number of particles to add on click
           },
           repulse: {
             distance: 100, // distance of the particles from the cursor
@@ -51,7 +51,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
         },
         size: {
-          value: { min: 1, max: 3 }, // let's randomize the particles size a bit
+          value: { min: 1, max: 2}, // let's randomize the particles size a bit
         },
       },
     };
