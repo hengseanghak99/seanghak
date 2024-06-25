@@ -18,7 +18,7 @@ const Body = () => {
                 <div className="bg-gray-800 p-6 rounded-lg shadow-md">
                   <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
                     QA Tester
-                    <span className="bg-blue-100 text-blue-900 text-sm font-medium ml-3 px-2.5 py-0.5 rounded">
+                    <span className="bg-amber-400	 text-blue-900 text-sm font-mono ml-3 px-2.5 py-0.5 rounded">
                       Current
                     </span>
                   </h3>

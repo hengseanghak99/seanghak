@@ -42,7 +42,7 @@ function Header() {
             id="navbar-default"
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              <li className="hover:border-solid hover:border-2 hover:border-amber-400 rounded">
+              <li className="hover:border-amber-600">
                 <a
                   href="/"
                   className="block py-2 px-3 text-white rounded hover:text-green-500 md:border-0 md:p-0 md:text-4xl"
@@ -50,7 +50,7 @@ function Header() {
                   Portfolio
                 </a>
               </li>
-              <li className="hover:border-solid hover:border-2 hover:border-amber-400 rounded">
+              <li className="hover:border-amber-600">
                 <a
                   href="/exed"
                   className="block py-2 px-3 text-white rounded hover:text-green-500 md:border-0 md:p-0 md:text-4xl"
@@ -58,7 +58,7 @@ function Header() {
                   Ex&Ed
                 </a>
               </li>
-              <li className="hover:border-solid hover:border-2 hover:border-amber-400 rounded">
+              <li className="hover:border-amber-600">
                 <a
                   href="/blogs"
                   className="block py-2 px-3 text-white rounded hover:text-green-500 md:border-0 md:p-0 md:text-4xl"
@@ -66,7 +66,7 @@ function Header() {
                   Blogs
                 </a>
               </li>
-              <li className="hover:border-solid hover:border-2 hover:border-amber-400 rounded">
+              <li className="hover:border-amber-600">
                 <a
                   href="/contact-me"
                   className="block py-2 px-3 text-white rounded hover:text-green-500 md:border-0 md:p-0 md:text-4xl"
