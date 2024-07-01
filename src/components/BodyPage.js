@@ -1,122 +1,100 @@
 import React from "react";
-import myImage from "../image/seanghak_profile.jpg";
+import myImage from "../image/seanghak_profile.jpg"; // Replace with the actual path to your image
+import Type from "./Type";
 import DownloadButton from "./DownloadButton";
 
-const Body = () => {
+function Home() {
   return (
-    <div className="relative">
-      <main className="flex-col justify-around py-16 font-mono">
-        <section id="portfolio" className="py-10 md:py-16">
-          <div className="container max-w-screen-xl mx-auto px-4">
-            <div className="text-center text-white">
-              <div className="flex justify-center mb-16">
-                <img
-                  className="rounded-full w-96 h-96"
-                  src={myImage}
-                  alt="Kate Wolff's profile"
-                />
+    <>
+      <section
+        className="text-gray-300 min-h-screen flex items-center"
+        id="home"
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-7/12 mb-8 md:mb-0">
+              <div className="py-20">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  Hi There!{" "}
+                  <span className="wave" role="img" aria-labelledby="wave">
+                    👋🏻
+                  </span>
+                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold">
+                  I'M <strong className="text-blue-500">Heng Seanghak</strong>
+                </h1>
+                <div className="mt-8 text-4xl text-left text-orange-300">
+                  <Type />
+                </div>
               </div>
-              <h6 className="font-medium text-lg md:text-2xl uppercase mb-8">
-                QA Tester
-              </h6>
-              <h1 className="font-normal text-4xl md:text-7xl leading-none mb-8">
-               HENG SEANGHAK
-              </h1>
-              <p className="font-normal text-md md:text-xl mb-16">
-                Insanity is doing the same things repeatedly and expected
-                different results.
-              </p>
               <DownloadButton></DownloadButton>
             </div>
+            <div className="w-full md:w-5/12">
+              <div className="text-center text-white">
+                <div className="flex justify-center mb-16">
+                  <img
+                    className="rounded-full w-96 h-96"
+                    src={myImage}
+                    alt="Heng Seanghak's profile"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-        <section
-          id="projects"
-          className="p-10 text-gray-300"
-        >
-          <h2 className="text-2xl font-bold mb-4">Projects</h2>
-
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold">
-              Automated Testing Framework
-            </h3>
-            <p className="italic">Jan 2023 - Apr 2023</p>
-            <p>
-              Developed an automated testing framework using Selenium and TestNG
-              for a web-based e-commerce application. The framework included
-              comprehensive test cases for functional, regression, and load
-              testing, significantly reducing manual testing efforts and
-              improving bug detection efficiency.
+          <div className="flex flex-col item-center justify-center">
+            <p className="text-center text-white font-mono text-md md:text-xl mb-16">
+              Insanity is doing the same things repeatedly and expected
+              different results.
             </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Technologies Used: Selenium, TestNG, Java</li>
-              <li>
-                Key Achievements: Reduced testing time by 50%, improved test
-                coverage by 40%
-              </li>
-            </ul>
           </div>
+        </div>
+      </section>
+      <section className="font-mono px-40 text-gray-300">
+        <h2 className="text-2xl font-bold mb-4">About Me</h2>
 
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold">Performance Testing Suite</h3>
-            <p className="italic">Jul 2022 - Dec 2022</p>
-            <p>
-              Designed and implemented a performance testing suite using JMeter
-              for a high-traffic web application. The project involved setting
-              up test scenarios, analyzing performance metrics, and providing
-              optimization recommendations to enhance application scalability
-              and reliability.
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Technologies Used: JMeter, Jenkins, Grafana</li>
-              <li>
-                Key Achievements: Identified and resolved performance
-                bottlenecks, resulting in a 30% improvement in response times
-              </li>
-            </ul>
-          </div>
+        <div className="mb-6">
+          <p>
+            Hi everyone, I'm Heng Seanghak, a QA Tester from Kompong Cham,
+            Cambodia. With 3 years of experience, I specialize in both automated
+            and manual software testing. I've tested software for the government
+            (EDC, SWMA, Siem Reap government) and various overseas projects. I
+            am skilled in using automated testing tools like Ranorex and
+            Playwright and have some experience in web and mobile development. I
+            also enjoy coding and am currently learning to be a Full Stack
+            Developer. I'm passionate about my work and eager to keep learning!
+          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4 underline">
+            Technical Skills
+          </h2>
+          <ul className="list-disc list-inside ml-4">
+            <li>Testing: Manual & Automation (Playwright, Ranorex, JMeter, Postman)</li>
+            <li>Defect Tracking: (Gitlab,Asana)</li>
+            <li>Design tool: Figma, Photoshop</li>
+            <li>Communication tool: Slack , Telegram</li>
+            <li>SDLC: (Agile, Waterfall)</li>
+            <li>Programming: (Python, JavaScript, HTML, CSS)</li>
+          </ul>
 
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold">
-              Mobile Application Testing
-            </h3>
-            <p className="italic">Feb 2022 - May 2022</p>
-            <p>
-              Conducted comprehensive testing for a mobile banking application
-              using Appium. The project included functional, usability, and
-              security testing to ensure a seamless and secure user experience
-              across various devices and operating systems.
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Technologies Used: Appium, Java, Android Studio</li>
-              <li>
-                Key Achievements: Enhanced application stability and security,
-                decreased defect leakage by 20%
-              </li>
-            </ul>
-          </div>
+          <h2 className="text-2xl font-bold mt-8 mb-4 underline">
+            Soft Skills
+          </h2>
+          <ul className="list-disc list-inside ml-4">
+            <li>Problem Solving & Analytical Thinking</li>
+            <li>Attention to Detail</li>
+            <li>Communication</li>
+            <li>Collaboration</li>
+          </ul>
 
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold">Web Application Testing</h3>
-            <p className="italic">Sep 2021 - Jan 2022</p>
-            <p>
-              Led the QA efforts for a customer relationship management (CRM)
-              web application. The project included writing and executing test
-              cases, automating regression tests, and ensuring compliance with
-              industry standards.
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Technologies Used: Selenium, TestNG, Jenkins</li>
-              <li>
-                Key Achievements: Improved test efficiency by 35%, ensured 100%
-                compliance with industry standards
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    </div>
+          <h2 className="text-2xl font-bold mt-8 mb-4 underline">Bonus</h2>
+          <ul className="list-disc list-inside ml-4">
+            I've some knowledge about:
+            <li>Web Development (Python, JavaScript, HTML, CSS, mySQL)</li>
+            <li>Basic Mobile Development (Flutter / React Native)</li>
+          </ul>
+        </div>
+      </section>
+    </>
   );
-};
+}
 
-export default Body;
+export default Home;
