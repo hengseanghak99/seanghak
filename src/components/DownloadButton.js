@@ -18,7 +18,7 @@ class DownloadButton extends React.Component {
         onClick={this.handleDownload}
       >
         <span className="relative px-5 text-lg w-64 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Hire Me
+        Download CV
         </span>
       </button>
     );

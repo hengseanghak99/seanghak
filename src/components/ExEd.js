@@ -3,7 +3,7 @@ import { BriefcaseBusiness, GraduationCap, Library } from "lucide-react";
 
 const Body = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen pt-10">
       <main className="flex-col justify-around py-8 md:py-16 font-mono">
         <section className="py-8 md:py-16">
           <div className="container max-w-screen-xl mx-auto px-4">
