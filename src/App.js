@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ExEdPage from "./pages/ExEdPage";
 import NotFound from "./pages/NotFound"
 import Blogs from "./pages/Blogs";
+import BlogDetails from "./pages/BlogDetails";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/contact-me" element={<EmailMe />} />
         <Route path="/exed" element={<ExEdPage />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blo" element={<BlogDetails />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
