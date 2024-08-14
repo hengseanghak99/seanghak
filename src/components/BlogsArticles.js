@@ -3,8 +3,6 @@ import myImage from "../image/seanghak_profile.jpg"; // Replace with the actual 
 import Type from "./Type";
 import DownloadButton from "./DownloadButton";
 
-import Photo from "/Users/seanghak/Desktop/h-hak/my-app/src/image/vanda_profile.jpeg";
-
 const sampleArticles = [
   {
     id: 1,
@@ -12,7 +10,7 @@ const sampleArticles = [
     content:
       "Web development is rapidly evolving, with new technologies and frameworks emerging every year. This article explores the latest trends and what to expect in the future.",
     date: "August 10, 2024",
-    image: Photo,
+    image: myImage,
     link: "blo",
   },
   {
@@ -21,7 +19,7 @@ const sampleArticles = [
     content:
       "React hooks are a powerful feature that allows you to use state and other React features without writing a class. Learn how to use hooks and how they can simplify your code.",
     date: "August 15, 2024",
-    image: Photo,
+    image: myImage,
     link: "blo",
   },
   {
@@ -30,7 +28,7 @@ const sampleArticles = [
     content:
       "Writing clean code is crucial for maintainability and readability. This article covers some best practices and tips to keep your codebase clean and organized.",
     date: "August 20, 2024",
-    image: Photo,
+    image: myImage,
     link: "blo",
   },
   {
@@ -39,7 +37,7 @@ const sampleArticles = [
     content:
       "Writing clean code is crucial for maintainability and readability. This article covers some best practices and tips to keep your codebase clean and organized.",
     date: "August 20, 2024",
-    image: Photo,
+    image: myImage,
     link: "blo",
   },
   {
@@ -48,7 +46,7 @@ const sampleArticles = [
     content:
       "Writing clean code is crucial for maintainability and readability. This article covers some best practices and tips to keep your codebase clean and organized.",
     date: "August 20, 2024",
-    image: Photo,
+    image: myImage,
     link: "blo",
   },
 ];
