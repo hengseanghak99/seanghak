@@ -98,7 +98,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className=" p-4 text-center text-yellow-300 bg-tranparent border border-white ">
+        <div className=" p-4 text-center text-yellow-300 bg-tranparent border rounded-lg border-white ">
           © 2023 Copyright:
           <a className="text-yellow-300" href="https://tw-elements.com/">
             HENG SEANGHAK

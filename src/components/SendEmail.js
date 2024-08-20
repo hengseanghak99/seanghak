@@ -15,9 +15,6 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // emailjs.sendForm('service_fjjfylf','template_3r77k8e', event.target, 'IKvdU6SPQY8n0je7m'); if i use this it working fine
-
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -49,9 +46,9 @@ const ContactForm = () => {
         </div>
       )}
       {/* Contact Us Card Container */}
-      <div className="grid place-items-center mx-2 my-20 sm:my-auto">
+      <div className="grid place-items-center mx-2 my-20 sm:my-auto pt-10">
         {/* Contact Us Card */}
-        <div className="w-11/12 p-12 sm:w-8/12 md:w-6/12 lg:w-5/12 2xl:w-4/12 px-6 py-10 sm:px-10 sm:py-6 border-2 border-white-500 rounded-lg shadow-md lg:shadow-lg bg-black">
+        <div className="w-11/12 p-12 sm:w-8/12 md:w-6/12 lg:w-5/12 2xl:w-4/12 px-6 py-10 sm:px-10 sm:py-6 border-2 border-white-500 rounded-lg shadow-md lg:shadow-lg bg-stone-800">
           {/* Card Title */}
           <h2 className="text-center font-mono text-3xl lg:text-4xl text-white">
             Contact Me

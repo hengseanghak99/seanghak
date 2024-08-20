@@ -12,13 +12,12 @@ const BlogsArticles = () => {
   const articles = data?.data || [];
 
   console.log(articles);
-
   return (
     <section className="text-gray-300 min-h-screen flex items-center font-mono">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex flex-wrap justify-center">
           <div className="max-w-5xl mx-auto w-full">
-            <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-8 pt-20">
+            <h2 className="font-bold text-2xl md:text-5xl lg:text-6xl leading-none mb-8 text-white text-center pt-20">
               Blog Articles
             </h2>
             <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
@@ -133,4 +132,4 @@ const BlogsArticles = () => {
 
 export default BlogsArticles;
 
-
+ 
