@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../image/seanghak_profile.jpg"; // Replace with the actual path to your image
+import myImage from "../image/seanghak_profile.jpg"; 
 import Type from "./Type";
 import DownloadButton from "./DownloadButton";
 

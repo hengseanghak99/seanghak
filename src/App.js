@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/contact-me" element={<EmailMe />} />
         <Route path="/exed" element={<ExEdPage />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blo" element={<BlogDetails />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
