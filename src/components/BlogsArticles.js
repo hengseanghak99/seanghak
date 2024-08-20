@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const BlogsArticles = () => {
-  const { data, error, loading } = useFetch('http://localhost:1337/api/blogs?populate=*');
+  const { data, error, loading } = useFetch('https://profile-xst5.onrender.com/api/blogs?populate=*');
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!!</p>;
@@ -104,11 +104,7 @@ const BlogsArticles = () => {
                       className="block p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:border-yellow-500"
                     >
                       <div>
-                        <img
-                          src={`http://localhost:1337${article.attributes.coverImg.data.attributes.url}`}
-                          alt={article.attributes.blogTitle}
-                          className="w-full h-40 md:h-64 object-cover rounded-t-lg mb-4"
-                        />
+                        <img className="w-full h-40 md:h-64 object-cover rounded-t-lg mb-4" src={`https://profile-xst5.onrender.com${article.attributes.coverImg.data.attributes.url}`} alt={article.attributes.blogTitle} />
                         <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
                           {article.attributes.blogTitle}
                         </h3>
@@ -131,6 +127,10 @@ const BlogsArticles = () => {
       </div>
     </section>
   );
+
+
 };
 
 export default BlogsArticles;
+
+
