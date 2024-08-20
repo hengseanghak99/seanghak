@@ -10,7 +10,7 @@ import BlogDetails from "./pages/BlogDetails";
 import useFetch from "./hooks/useFetch";
 
 const App = () => {
-let {data,error,loading} = useFetch('http://localhost:1337/api/blogs?populate=*');
+let {data,error,loading} = useFetch('https://profile-xst5.onrender.com/api/blogs?populate=*');
 
   return (
     <Router>
