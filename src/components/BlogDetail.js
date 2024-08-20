@@ -5,7 +5,7 @@ import useFetch from "../hooks/useFetch";
 const BlogDetail = () => {
   const { id } = useParams();
   const { data, error, loading } = useFetch(
-    "http://localhost:1337/api/blogs?populate=*"
+    "https://profile-xst5.onrender.com/api/blogs?populate=*"
   );
 
   if (loading) return <p>Loading...</p>;
@@ -52,13 +52,12 @@ const BlogDetail = () => {
 
         {/* Blog Image */}
         <img
-          src={`http://localhost:1337${coverImg.data.attributes.url}`}
-          alt={blogTitle}
+         src={`https://profile-xst5.onrender.com${article.attributes.coverImg.data.attributes.url}`} alt={article.attributes.blogTitle}
           className="w-full h-auto rounded-lg mb-6"
         />
 
         {/* Blog Content */}
-        <div className="flex flex-col items-center text-white mb-6">
+        <div className="flex flex-col text-white mb-6">
           {blogContent.map((contentBlock, index) => (
             <p key={index} className="mb-4">
               {contentBlock.children.map((text, textIndex) => (
