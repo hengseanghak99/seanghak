@@ -39,7 +39,7 @@ const BlogDetail = () => {
     <div className="container mx-auto px-4 py-8 pt-20 text-white font-mono">
       <div className="max-w-5xl mx-auto bg-gray-800 p-10">
         {/* Blog Title */}
-        <h1 className="text-4xl font-bold mb-4">{blogTitle}</h1>
+        <h1 className="text-3xl font-bold mb-4">{blogTitle}</h1>
 
         {/* Blog Metadata */}
         <div className="flex items-center justify-between text-white mb-6 ">
