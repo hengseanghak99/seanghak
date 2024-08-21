@@ -2,18 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
+const url = 'http://localhost:1337'
+
 const BlogsArticles = () => {
   const { data, error, loading } = useFetch(
-    "https://profile-xst5.onrender.com/api/blogs?populate=*"
+    `${url}/api/blogs?populate=*`
   );
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!!</p>;
-
   // Extract blog articles from the data
   const articles = data?.data || [];
-
-  console.log(articles);
   return (
     <section className="text-gray-300 min-h-screen flex items-center font-mono">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
@@ -61,9 +60,10 @@ const BlogsArticles = () => {
                       <div>
                         <img
                           className="w-full h-40 md:h-64 object-cover rounded-t-lg mb-4"
-                          src={`https://profile-xst5.onrender.com${article.attributes.coverImg.data.attributes.url}`}
+                          src={`${url}${article.attributes.coverImg.data.attributes.url}`}
                           alt={article.attributes.blogTitle}
                         />
+
                         <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
                           {article.attributes.blogTitle}
                         </h3>

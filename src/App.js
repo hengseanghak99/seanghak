@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound"
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
 import useFetch from "./hooks/useFetch";
+import 'ckeditor5/ckeditor5.css';
 
 const App = () => {
 let {data,error,loading} = useFetch('https://profile-xst5.onrender.com/api/blogs?populate=*');
@@ -27,4 +28,6 @@ let {data,error,loading} = useFetch('https://profile-xst5.onrender.com/api/blogs
 };
 
 export default App;
+
+
 
