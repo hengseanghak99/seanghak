@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
-const url = 'http://localhost:1337'
+const url = 'https://profile-xst5.onrender.com'
 
 const BlogsArticles = () => {
   const { data, error, loading } = useFetch(

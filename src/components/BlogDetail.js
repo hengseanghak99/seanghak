@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-const URL = "http://localhost:1337"
+const URL = "https://profile-xst5.onrender.com"
 
 const BlogDetail = () => {
   const { id } = useParams();
