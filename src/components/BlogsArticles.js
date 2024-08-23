@@ -16,6 +16,9 @@ const BlogsArticles = () => {
   const articles = data?.data || [];
   const categoryList = Cdata?.data || [];
 
+  console.log(articles)
+  console.log(categoryList)
+
   return (
     <section className="text-gray-300 min-h-screen flex items-center font-mono">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
@@ -71,8 +74,7 @@ const BlogsArticles = () => {
                           {article.attributes.blogTitle}
                         </h3>
                         <span className="bg-amber-400 text-blue-900 text-l font-mono px-2.5 py-0.5 rounded">
-                          {/* <button>{article.attributes.categories.data.attributes.category_field}</button> */}
-                          <button>hello world</button>
+                          <button>{article.attributes.categories.data.attributes.category_field}</button>
                         </span>
                         <p className="text-gray-400 mb-4">
                           {new Date(
