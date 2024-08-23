@@ -3,12 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-const URL = "https://profile-xst5.onrender.com"
+const myURL =  process.env.REACT_APP_URL
 
 const BlogDetail = () => {
   const { id } = useParams();
   const { data, error, loading } = useFetch(
-    `${URL}/api/blogs?populate=*`
+    `${myURL}/api/blogs?populate=*`
   );
 
   if (loading) return <p>Loading...</p>;
@@ -52,7 +52,7 @@ const BlogDetail = () => {
         </div>
         {/* Blog Image */}
         <img
-          src={`${URL}${article.attributes.coverImg.data.attributes.url}`}
+          src={`${myURL}${article.attributes.coverImg.data.attributes.url}`}
           alt={blogTitle}
           className="w-full h-auto rounded-lg mb-6"
         />

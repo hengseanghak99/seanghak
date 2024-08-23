@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const PUBLIC_KEY_= "IKvdU6SPQY8n0je7m";
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,7 +20,7 @@ const ContactForm = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         event.target,
-        process.env.PUBLIC_KEY_
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(() => {
         setShowPopup(true);
