@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
-const myURL =  process.env.REACT_APP_URL
+const myURL =process.env.REACT_APP_URL
+console.log(myURL);
 
 const BlogsArticles = () => {
   const { data, error, loading } = useFetch(

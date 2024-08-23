@@ -10,8 +10,10 @@ import BlogDetails from "./pages/BlogDetails";
 import useFetch from "./hooks/useFetch";
 import 'ckeditor5/ckeditor5.css';
 
+const myURL =process.env.REACT_APP_URL
+
 const App = () => {
-let {data,error,loading} = useFetch('https://profile-xst5.onrender.com/api/blogs?populate=*');
+let {data,error,loading} = useFetch(`${myURL}/api/blogs?populate=*`);
 
   return (
     <Router>
