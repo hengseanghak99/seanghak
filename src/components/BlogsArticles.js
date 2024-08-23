@@ -15,10 +15,7 @@ const BlogsArticles = () => {
   // Extract blog articles and categories from the data
   const articles = data?.data || [];
   const categoryList = Cdata?.data || [];
-
-  console.log(articles)
-  console.log(categoryList)
-
+  
   return (
     <section className="text-gray-300 min-h-screen flex items-center font-mono">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
