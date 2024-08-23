@@ -71,7 +71,8 @@ const BlogsArticles = () => {
                           {article.attributes.blogTitle}
                         </h3>
                         <span className="bg-amber-400 text-blue-900 text-l font-mono px-2.5 py-0.5 rounded">
-                          <button>{article.attributes.categories.data.attributes.category_field}</button>
+                          {/* <button>{article.attributes.categories.data.attributes.category_field}</button> */}
+                          <button>hello world</button>
                         </span>
                         <p className="text-gray-400 mb-4">
                           {new Date(
