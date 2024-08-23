@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
-const url = 'https://profile-xst5.onrender.com'
+const myURL =  process.env.REACT_APP_URL
 
 const BlogsArticles = () => {
   const { data, error, loading } = useFetch(
-    `${url}/api/blogs?populate=*`
+    `${myURL}/api/blogs?populate=*`
   );
 
   if (loading) return <p>Loading...</p>;
@@ -60,7 +60,7 @@ const BlogsArticles = () => {
                       <div>
                         <img
                           className="w-full h-40 md:h-64 object-cover rounded-t-lg mb-4"
-                          src={`${url}${article.attributes.coverImg.data.attributes.url}`}
+                          src={`${myURL}${article.attributes.coverImg.data.attributes.url}`}
                           alt={article.attributes.blogTitle}
                         />
 
