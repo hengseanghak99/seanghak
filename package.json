@@ -12,6 +12,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.4",
+    "ckeditor-tailwind-reset": "^1.0.5",
+    "ckeditor5": "^43.0.0",
     "dompurify": "^3.1.6",
     "dotenv": "^16.4.5",
     "lucide-react": "^0.396.0",

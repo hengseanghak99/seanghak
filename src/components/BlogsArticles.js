@@ -2,24 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
-const myURL =process.env.REACT_APP_URL
-console.log(myURL);
-
+const myURL = process.env.REACT_APP_URL;
 const BlogsArticles = () => {
-  const { data, error, loading } = useFetch(
-    `${myURL}/api/blogs?populate=*`
+  const { data, error, loading } = useFetch(`${myURL}/api/blogs?populate=*`);
+  const { data: Cdata, error: Cerror, loading: Cloading } = useFetch(
+    `${myURL}/api/categories?populate=*`
   );
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!!</p>;
-  // Extract blog articles from the data
+  if (loading || Cloading) return <p>Loading...</p>;
+  if (error || Cerror) return <p>Error!!</p>;
+
+  // Extract blog articles and categories from the data
   const articles = data?.data || [];
+  const categoryList = Cdata?.data || [];
+
   return (
     <section className="text-gray-300 min-h-screen flex items-center font-mono">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex flex-wrap justify-center">
           <div className="max-w-5xl mx-auto w-full">
-            <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl leading-none mb-8 text-white text-center pt-">
+            <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl leading-none mb-8 text-white text-center pt-40">
               Blog Articles
             </h2>
             <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
@@ -28,18 +30,18 @@ const BlogsArticles = () => {
                 {/* Popular Topic Section */}
                 <div className="bg-gray-800 border border-gray-700 rounded-lg shadow-lg p-10">
                   <h3 className="text-white text-xl md:text-2xl font-bold mb-4">
-                    Popular Topic
+                    Categories list
                   </h3>
                   <ul className="space-y-4 list-disc list-inside">
-                    {articles.length > 0 ? (
-                      articles.slice(0, 3).map((article) => (
-                        <li className="pt-3" key={article.id}>
-                          <a
-                            href="#"
+                    {categoryList.length > 0 ? (
+                      categoryList.slice(0, 3).map((category) => (
+                        <li className="pt-3" key={category.id}>
+                          <Link
+                            to={`/categories/${category.id}`}
                             className="font-medium hover:underline hover:text-yellow-500"
                           >
-                            {article.attributes.blogTitle}
-                          </a>
+                            {category.attributes.category_field}
+                          </Link>
                         </li>
                       ))
                     ) : (
@@ -68,6 +70,9 @@ const BlogsArticles = () => {
                         <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
                           {article.attributes.blogTitle}
                         </h3>
+                        <span className="bg-amber-400 text-blue-900 text-l font-mono px-2.5 py-0.5 rounded">
+                          <button>{article.attributes.categories.data.attributes.category_field}</button>
+                        </span>
                         <p className="text-gray-400 mb-4">
                           {new Date(
                             article.attributes.createdAt
