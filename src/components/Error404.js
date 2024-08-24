@@ -1,19 +1,58 @@
 import React from "react";
+import { useSpring, animated,config, to } from "@react-spring/web";
+import { scale, dist } from 'vec-la'
+import { useDrag } from 'react-use-gesture';
+import styles from './styles.module.css'
 
 const Error404 = () => {
+  // direction calculates pointer direction
+  // memo is like a cache, it contains the values that you return inside "set"
+  // this way we can inject the springs current coordinates on the initial event and
+  // add movement to it for convenience
+  const [{ pos }, api] = useSpring(() => ({ pos: [150,10] }))
+  const [{ angle }, angleApi] = useSpring(() => ({
+    angle: 0,
+    config: config.wobbly,
+  }))
+  const bind = useDrag(
+    ({ xy, previous, down, movement: pos, velocity, direction }) => {
+      api.start({
+        pos,
+        immediate: down,
+        config: { velocity: scale(direction, velocity), decay: true },
+      })
+
+      if (dist(xy, previous) > 10 || !down)
+        angleApi.start({ angle: Math.atan2(direction[0], -direction[1]) })
+    },
+    { initial: () => pos.get() }
+  )
+
   return (
-    <div className="text-[#444] m-0 font-normal text-[14px] leading-[20px] font-[Arial,Helvetica,sans-serif] h-full bg-white">
-      <div className="h-auto min-h-full">
-        <div className="text-center w-[800px] ml-[-400px] absolute top-[30%] left-[50%]">
-          <h1 className="m-0 text-[150px] leading-[150px] font-bold">404</h1>
-          <h2 className="mt-[20px] text-[30px]">Forbidden</h2>
-          <p>Oop!! I feel that you come in the wrong place</p>
-          <div>
-            <a href="/contact-me" className="block py-2 px-3 text-gray-400 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-amber-300 dark:hover:text-white md:dark:hover:bg-transparent md:text-2xl">
-              back to my Portfolio
-            </a>
-          </div>
-        </div>
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+      <animated.div
+      className={styles.rocket}
+      {...bind()}
+      style={{
+        transform: to(
+          [pos, angle],
+          // @ts-ignore
+          ([x, y], a) => `translate3d(${x}px,${y}px,0) rotate(${a}rad)`
+        ),
+      }}
+    />
+        <h1 className="text-9xl font-extrabold text-stone-400">404</h1>
+        <h2 className="mt-4 text-3xl font-semibold text-stone-400">Forbidden</h2>
+        <p className="mt-2 text-lg text-gray-500">
+          Oops! It looks like you've ventured into the wrong place.
+        </p>
+        <a
+          href="/"
+          className="mt-6 inline-block px-5 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Back to my Portfolio
+        </a>
       </div>
     </div>
   );
