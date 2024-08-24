@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../image/seanghak_profile.jpg"; 
+import myImage from "../image/seanghak_user_profile.jpg"; 
 import Type from "./Type";
 import DownloadButton from "./DownloadButton";
 
@@ -36,7 +36,7 @@ function Home() {
               <div className="text-center text-white">
                 <div className="flex justify-center mb-16">
                   <img
-                    className="rounded-full w-96 h-96"
+                    className="rounded-full w-96 h-96 object-cover"
                     src={myImage}
                     alt="Heng Seanghak's profile"
                   />
