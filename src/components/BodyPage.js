@@ -3,8 +3,15 @@ import myImage from "../image/seanghak_user_profile.jpg";
 import Type from "./Type";
 import DownloadButton from "./DownloadButton";
 import { useSpring, animated } from "@react-spring/web";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function Home() {
+  const [dotLottie, setDotLottie] = React.useState(null);
+
+  const dotLottieRefCallback = (dotLottie) => {
+    setDotLottie(dotLottie);
+  };
+
   const springs = useSpring({
     from: { x: -500 },
     to: { x: 0 },
@@ -16,7 +23,7 @@ function Home() {
         className="text-gray-300 min-h-screen flex items-center"
         id="home"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 pt-20">
           <div className="flex flex-wrap">
             <div className=" mx-auto max-w-7xl px-6 lg:px-8">
               <div className="py-20 font-mono">
@@ -39,29 +46,41 @@ function Home() {
             </div>
             <div className="w-full md:w-5/12">
               <div className="flex justify-center mb-16">
-                <animated.div style={{
-                  ...springs,
-                  }}>
-                     <img
-                  className="rounded-full w-96 h-96 object-cover"
-                  src={myImage}
-                  alt="Heng Seanghak's profile"
-                />
-
+                <animated.div
+                  style={{
+                    ...springs,
+                  }}
+                >
+                  <img
+                    className="rounded-full w-96 h-96 object-cover"
+                    src={myImage}
+                    alt="Heng Seanghak's profile"
+                  />
                 </animated.div>
-                  
-               
               </div>
             </div>
           </div>
           <div className="flex flex-col item-center justify-center">
-            <p className="text-center text-white font-mono text-md md:text-xl mb-16">
+            <p className="text-center text-white font-mono text-md md:text-xl">
               Insanity is doing the same things repeatedly and expected
               different results.
             </p>
+            <div className="w-full">
+            <DotLottieReact
+                src="https://lottie.host/bdfe81b7-77df-423f-b533-8883ed018d24/ScABx3w2Yq.json"
+                loop
+                autoplay
+                //playOnHover
+                dotLottieRefCallback={dotLottieRefCallback}
+              />
+
+            </div>
           </div>
+          
         </div>
+        
       </section>
+      
       <section class="font-mono text-gray-300 mx-auto max-w-7xl px-6 lg:px-8">
         <h2 class="text-2xl font-bold mb-4">About Me</h2>
 
@@ -108,6 +127,7 @@ function Home() {
             <li>Basic Mobile Development (Flutter / React Native)</li>
           </ul>
         </div>
+        
       </section>
     </>
   );
