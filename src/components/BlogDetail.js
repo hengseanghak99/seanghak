@@ -80,7 +80,7 @@ const BlogDetail = () => {
         />
         {/*Blog content*/}
         <div
-          className="prose max-w-none prose-img:rounded-xl prose-a:text-white prose-headings:text-white prose-p:text-white prose-blockquote:text-white prose-strong:text-white"
+          className="prose max-w-none prose-img:rounded-xl prose-a:text-white prose-headings:text-white prose-p:text-white prose-blockquote:text-white prose-strong:text-white prose-ol:text-white prose-ul:text-white prose-li:text-white"
           dangerouslySetInnerHTML={{ __html: CKE }}
         />
 
