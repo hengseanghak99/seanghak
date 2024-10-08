@@ -1,12 +1,12 @@
-import React from 'react';
-import DOMPurify from 'dompurify';
+// import React from 'react';
+// import DOMPurify from 'dompurify';
 
-const BlogContent = ({ content }) => {
-  const sanitizedContent = DOMPurify.sanitize(content);
+// const BlogContent = ({ content }) => {
+//   const sanitizedContent = DOMPurify.sanitize(content);
 
-  return (
-    <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
-  );
-};
+//   return (
+//     <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
+//   );
+// };
 
-export default BlogContent;
+// export default BlogContent;

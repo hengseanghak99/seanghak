@@ -1,6 +1,7 @@
 import React from "react";
 import myImage from "../image/seanghak_user_profile.jpg";
 import Type from "./Type";
+import QuoteType from "./QuoteType";
 import DownloadButton from "./DownloadButton";
 import { useSpring, animated } from "@react-spring/web";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -62,25 +63,22 @@ function Home() {
           </div>
           <div className="flex flex-col item-center justify-center">
             <p className="text-center text-white font-mono text-md md:text-xl">
-              Insanity is doing the same things repeatedly and expected
-              different results.
+                  <QuoteType></QuoteType>
             </p>
-            <div className="w-full">
-            <DotLottieReact
+           
+            <div className="w-full max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-4">
+              <DotLottieReact
                 src="https://lottie.host/bdfe81b7-77df-423f-b533-8883ed018d24/ScABx3w2Yq.json"
                 loop
                 autoplay
                 //playOnHover
                 dotLottieRefCallback={dotLottieRefCallback}
               />
-
             </div>
           </div>
-          
         </div>
-        
       </section>
-      
+
       <section class="font-mono text-gray-300 mx-auto max-w-7xl px-6 lg:px-8">
         <h2 class="text-2xl font-bold mb-4">About Me</h2>
 
@@ -127,7 +125,6 @@ function Home() {
             <li>Basic Mobile Development (Flutter / React Native)</li>
           </ul>
         </div>
-        
       </section>
     </>
   );
